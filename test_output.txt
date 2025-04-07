@@ -1,0 +1,14 @@
+Original vs Cleaned:
+----------------------------------------
+Original: Adelaide Cup (Regional Holiday)
+Cleaned : Adelaide Cup
+----------------------------------------
+Original: Easter Saturday (Regional Holiday)
+Cleaned : Easter Saturday
+----------------------------------------
+Original: King's Birthday (Regional Holiday)
+Cleaned : King's Birthday
+----------------------------------------
+Original: Mother's Day (Not a Public Holiday)
+Cleaned : Mother's Day
+----------------------------------------

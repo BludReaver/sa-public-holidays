@@ -1,0 +1,57 @@
+Original content excerpt:
+--------------------------------------------------------------------------------
+BEGIN:VEVENT
+CLASS:PUBLIC
+UID:2025-03-10AU-SA2regregion@www.officeholidays.com
+CREATED:20250406T210925Z
+DESCRIPTION: South Australia Only. The cup has been held on the second Monday of March since March 2006. Before 2006 it was held in May\n\n2nd Monday in March. SA Only\n\nInformation provided by www.officeholidays.com
+URL:https://www.officeholidays.com/holidays/australia/south-australia/adelaide-cup
+DTSTART;VALUE=DATE:20250310
+DTEND;VALUE=DATE:20250311
+DTSTAMP:20080101T000000Z
+LOCATION:South Australia
+PRIORITY:5
+LAST-MODIFIED:20230724T000000Z
+SEQUENCE:1
+SUMMARY;LANGUAGE=en-us:Adelaide Cup (Regional Holiday)
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-ALLOWEXTERNCHECK:TRUE
+X-MS-OLK-AUTOFILLLOCATION:FALSE
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+X-MS-OLK-CONFTYPE:0
+END:VEVENT
+--------------------------------------------------------------------------------
+
+Cleaned content excerpt:
+--------------------------------------------------------------------------------
+BEGIN:VEVENT
+CLASS:PUBLIC
+UID:2025-03-10AU-SA2regregion@www.officeholidays.com
+CREATED:20250406T210925Z
+DESCRIPTION: South Australia Only. The cup has been held on the second Monday of March since March 2006. Before 2006 it was held in May\n\n2nd Monday in March. SA Only\n\nInformation provided by www.officeholidays.com
+URL:https://www.officeholidays.com/holidays/australia/south-australia/adelaide-cup
+DTSTART;VALUE=DATE:20250310
+DTEND;VALUE=DATE:20250311
+DTSTAMP:20080101T000000Z
+LOCATION:South Australia
+PRIORITY:5
+LAST-MODIFIED:20230724T000000Z
+SEQUENCE:1
+SUMMARY;LANGUAGE=en-us:Adelaide Cup
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-ALLOWEXTERNCHECK:TRUE
+X-MS-OLK-AUTOFILLLOCATION:FALSE
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
+X-MS-OLK-CONFTYPE:0
+END:VEVENT
+--------------------------------------------------------------------------------
+
+Checking for original summary format:
