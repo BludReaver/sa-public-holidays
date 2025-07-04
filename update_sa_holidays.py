@@ -83,7 +83,7 @@ def main():
         print("🧹 Cleaning event names...")
         cleaned_lines = []
         for line in content.splitlines():
-            if line.startswith("SUMMARY"):
+            if line.startswith("SUMMARY:") or line.startswith("SUMMARY;"):
                 colon_pos = line.find(":")
                 if colon_pos > -1:
                     summary_prefix = line[:colon_pos+1]
