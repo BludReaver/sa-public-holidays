@@ -1,22 +1,30 @@
 import re
 import requests
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 ICS_URL = "https://www.officeholidays.com/ics-all/australia/south-australia"
 OUTPUT_FILE = "sa_public_holidays.ics"
 URL = ICS_URL  # Used in notifications
 
-# Hardcoded next GitHub Action run time in UTC
-NEXT_RUN_UTC = datetime(2025, 10, 1, 0, 30, tzinfo=ZoneInfo("UTC"))
-
 def clean_event_name(summary: str) -> str:
     return re.sub(r"\s*\([^)]*\)", "", summary).strip()
 
+def get_next_run_utc() -> datetime:
+    now = datetime.now(tz=ZoneInfo("UTC"))
+    next_month = (now.replace(day=28) + timedelta(days=4)).replace(day=1)
+    return next_month.replace(hour=2, minute=30, second=0, microsecond=0)
+
+def format_with_ordinal(n: int) -> str:
+    if 11 <= n % 100 <= 13:
+        return f"{n}th"
+    return f"{n}{['th','st','nd','rd','th','th','th','th','th','th'][n % 10]}"
+
 def get_next_run_adelaide() -> str:
-    adelaide_time = NEXT_RUN_UTC.astimezone(ZoneInfo("Australia/Adelaide"))
-    return adelaide_time.strftime("%A %d %B %Y at %I:%M %p")
+    adelaide_time = get_next_run_utc().astimezone(ZoneInfo("Australia/Adelaide"))
+    day = format_with_ordinal(adelaide_time.day)
+    return adelaide_time.strftime(f"%A {day} %B %Y at %I:%M %p")
 
 def send_failure_notification(error_excerpt: str):
     token = os.environ.get("PUSHOVER_APP_TOKEN")
