@@ -21,8 +21,8 @@ def get_next_run_adelaide() -> str:
 def send_failure_notification(error_excerpt: str):
     token = os.environ.get("PUSHOVER_APP_TOKEN")
     user = os.environ.get("PUSHOVER_USER_KEY")
-    
-    if not token or not user or token == "YOUR_PUSHOVER_APP_TOKEN" or user == "YOUR_PUSHOVER_USER_KEY":
+
+    if not token or not user:
         print("⚠️ Pushover credentials not configured. Skipping failure notification.")
         print(f"Error: {error_excerpt}")
         return
@@ -52,8 +52,8 @@ def send_failure_notification(error_excerpt: str):
 def send_success_notification():
     token = os.environ.get("PUSHOVER_APP_TOKEN")
     user = os.environ.get("PUSHOVER_USER_KEY")
-    
-    if not token or not user or token == "YOUR_PUSHOVER_APP_TOKEN" or user == "YOUR_PUSHOVER_USER_KEY":
+
+    if not token or not user:
         print("⚠️ Pushover credentials not configured. Skipping success notification.")
         return
 
