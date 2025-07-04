@@ -2,15 +2,10 @@ name: Update SA Public Holidays
 
 on:
   schedule:
-    # Run at 10:30 AM Adelaide time for each quarter
-    # January (ACDT: UTC+10:30) - 00:00 UTC
-    - cron: '30 0 1 1 *'
-    # April (First few days might be ACDT, rest is ACST: UTC+9:30) - using ACST
-    - cron: '30 1 1 4 *'
-    # July (ACST: UTC+9:30) - 01:00 UTC
-    - cron: '30 1 1 7 *'
-    # October (First few days might be ACST, rest is ACDT: UTC+10:30) - using ACST
-    - cron: '30 1 1 10 *'
+    # ACDT (UTC+10:30) — October to March → 01:30 UTC = 12:00 PM ACDT
+    - cron: '30 1 1 10,11,12,1,2,3 *'
+    # ACST (UTC+9:30) — April to September → 02:30 UTC = 12:00 PM ACST
+    - cron: '30 2 1 4,5,6,7,8,9 *'
   workflow_dispatch:
 
 jobs:
